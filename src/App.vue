@@ -11,6 +11,19 @@ export default {
   name: 'App',
   components: {
     RatingCalculator
+  },
+  methods: {
+    playTrack() {
+      const kmAudio = new Audio(require('./assets/music/k-m.mp3'))
+      kmAudio.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+      }, false);
+      kmAudio.play();
+    }
+  },
+  mounted() {
+    this.playTrack()
   }
 }
 </script>

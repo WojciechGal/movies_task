@@ -32,25 +32,13 @@
             topRatedList: function () {
                 return MoviesAnalyzer.topRatedMoviesAmongFriends(parseInt(this.input))
             }
-        },
-        methods: {
-            playTrack() {
-                const kmAudio = new Audio(require('../assets/music/k-m.mp3'))
-                kmAudio.addEventListener('ended', function() {
-                    this.currentTime = 0;
-                    this.play();
-                }, false);
-                kmAudio.play();
-            }
-        },
-        mounted() {
-            this.playTrack()
         }
     }
 </script>
 
 <style scoped>
     .card-wrapper {
+        height: 18.5rem;
         width: 25%;
         margin-left: auto;
         margin-right: auto;
